@@ -1,0 +1,21 @@
+
+
+    private static CountDownLatch latch;
+
+    public static void main(String[] args) {
+
+        latch = new CountDownLatch(1);
+
+        try {
+
+            latch.await();
+
+
+
+        } catch (InterruptedException e) {
+
+            throw new RuntimeException(e);
+
+        }
+
+    }
