@@ -1,0 +1,14 @@
+*List of dev codes for HG.html:
+
+wdhfs - set sessionStorage Key 'HS' to '0' *HS is high score
+fdsat - Toggle inv of 'myGamePiece' *Toggle built-in method for invisibility
+osdag - Execute 'crash()' *crash() brings up gameover screen
+igyol - Execute 'redir(\'Debug\')' *redir('Debug') Redirects to debug website
+
+*List of Fun codes for HG.html (To fill boredom when you get bored):
+
+hsloy - Execute Custom method *chosen by user
+
+*Source of free audio:
+
+https://mixkit.co/free-sound-effects/game/
