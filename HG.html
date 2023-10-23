@@ -3,90 +3,95 @@
 <head>
 <link rel="scoresfxx" href="score.mp3">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
-    border:1px solid #d3d3d3;
-    background-color: #f1f1f1;
-}
-.button {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button3 {
-  display: none;
-}
-
-.button1 {background-color: #32a2a8;}/*#4CAF50;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
+	<style>
+	canvas {
+		border:none;/*1px solid #a1a1a1;*/
+		background-color: #a1a1a1;
+		cursor: default;
+	}
+	.button {
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		margin: 4px 2px;
+		cursor: pointer;
+	}
+	
+	.button3 {
+		display: none;
+	}
+	
+	.button1 {background-color: #32a2a8; width:fit-content;padding:8px 10px;}/*#4CAF50;} /* Green */
+	.button2 {background-color: #008CBA;} /* Blue */
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 60px;
+		height: 34px;
+	}
+	
+	/* Hide default HTML checkbox */
+	.switch input {
+		opacity: 0;
+		width: 0;
+		weight: 0;
+	}
+	
+	/* The slider */
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+	
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+	
+	input:checked + .slider {
+		background-color: #2196F3;
+	}
+	
+	input:focus + .slider {
+	  	box-shadow: 0 0 1px #2196F3;
+	}
+	
+	input:checked + .slider:before {
+	  	-webkit-transform: translateX(26px);
+	  	-ms-transform: translateX(26px);
+	  	transform: translateX(26px);
+	}
+	
+	/* Rounded sliders */
+	.slider.round {
+	  	border-radius: 34px;
+	}
+	
+	.slider.round:before {
+	  	border-radius: 50%;
+	}
+	body {
+		background-color: #101010;
+		zoom: 400%;
+	}
 </style>
 <title>Hello</title>
 </head>
@@ -99,7 +104,7 @@ input:checked + .slider:before {
 <source src="HG-audio/score.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-<center><canvas id="canvas" width="480" height="270"></canvas>
+<center><canvas style="display: block;" id="canvas" width="480" height="270"></canvas>
 <input id="INP" type="hidden"></input>
 <button id="INP2" type="button" class="button3" onclick="exeusefun(document.getElementById('INP').value)">Execute</input>
 <script>
@@ -161,23 +166,21 @@ document.addEventListener("DOMContentLoaded", touchClick);
 var code = "";
 
 addEvent(document, "keypress", function (e) {
-    e = e || window.event;
-    var charcode = e.charCode;
+    	e = e || window.event;
+    	var charcode = e.charCode;
 
-    var char = String.fromCharCode(charcode);
-
-    if (char==" "||char=="w") {
-
-        if (crashed==true) {res();}
-
-  	    accelerate(-0.2);
-
-    }
-
-    code+=char;
-
-    if (code.includes("wdhfs")) {code="";console.log("RESETING GAME KEY \'HS\'");myStorage.setItem('HS', '0');location.reload();}
-
+    	var char = String.fromCharCode(charcode);
+    	if (char==" "||char=="w") {
+		if (crashed==true) {res();}
+			accelerate(-0.2);
+    	}
+    	code+=char;
+    	if (code.includes("wdhfs")) {
+	    	code="";
+	    	console.log("RESETING GAME KEY \'HS\'");
+	    	myStorage.setItem('HS', '0');
+	    	location.reload();
+	}
     if (code.includes("hsloy")) {
         code="";
         var myDiv = document.getElementById("INP");
@@ -185,45 +188,31 @@ addEvent(document, "keypress", function (e) {
         var myDiv2 = document.getElementById("INP2");
         myDiv2.style.display = "block";
     }
-
     if (code.includes("fdsat")) {
         code="";
         myGamePiece.inv = !myGamePiece.inv;
     }
-
     if (code.includes("osdag")) {
         code="";
         Crash();
     }
-
     //executeFunctionByName("click", window, null);
-
     /* else {
-
       console.info("There is no valid input function for \"" + char + "\"");
-
     }*/
 });
 
 addEvent(document, "keyup", function (e) {
     e = e || window.event;
-
     var charcode = e.charCode;
-
     var char = String.fromCharCode(charcode);
-
     //console.info(e.key);
 
     if (e.key==" "||e.key=="w") {
-
       if (crashed==true) {res();}
-
       accelerate(0.05);
-
     }/* else {
-
       console.info("There is no valid input function for \"" + char + "\"");
-
     }*/
 });
 
@@ -238,9 +227,7 @@ function addEvent(element, eventName, callback) {
 }
 
 (function(){
-
     //s
-
     setTimeout(arguments.callee, 250);
 })();
 
@@ -633,21 +620,9 @@ function executeFunctionByName(functionName, context , args ) {
 }
 
 </script>
-<!--br/-->
-
-<!--button type = "button" class="button button1" id = "GFG"
-    onclick = "res()">
-    Restart
-</button--></center>
-<!--button type = "button" class="button button2" id = "Hey" onclick="Debug()"-->
-  <!--Debug Button
-</button>
-<br/>
-<br/>
-<label class="switch">
-  <input type="checkbox" ontoggle="toggleLog()">
-  <span class="slider"></span>
-</label-->
+<div style="display:block;"><a href="index.html"><button class="button button1" id="Homebutton">
+Back to home</a></button></div>
+</center>
 <br>
 </body>
 </html>
