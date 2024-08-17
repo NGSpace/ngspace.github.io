@@ -205,8 +205,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		</details>
 	</div>
 	<div id="contents">
-	</div>
-`;
+	</div>`;
 	contents = document.body.innerHTML;
 	document.body.innerHTML = basehtml;
 	document.getElementById("contents").innerHTML = contents;
