@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		gtag('js', new Date());
 		
 		gtag('config', 'G-M0SCB1X0YP');
+		
+		gtag('consent', 'update', {
+			'ad_user_data': 'granted',
+			'ad_personalization': 'granted',
+			'ad_storage': 'granted',
+			'analytics_storage': 'granted'
+		});
+
 	</script>
 	<style>
 	#topbar {
