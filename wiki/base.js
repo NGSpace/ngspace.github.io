@@ -1,24 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
   basehtml = `
-	
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0SCB1X0YP"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		
-		gtag('config', 'G-M0SCB1X0YP');
-		
-		gtag('consent', 'update', {
-			'ad_user_data': 'granted',
-			'ad_personalization': 'granted',
-			'ad_storage': 'granted',
-			'analytics_storage': 'granted'
-		});
-
-	</script>
 	<style>
 	#topbar {
 			background-color: #101010;
