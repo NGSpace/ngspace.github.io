@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-
   basehtml = `
 	<style>
 	#topbar {
@@ -100,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 			padding: 5px;
 			white-space: pre;
 			width: fit-content;
+			tab-size: 4;
 		}
 		inline-code {
 			font-family: monospace;
