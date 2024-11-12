@@ -2,7 +2,7 @@
   --margin: 20px;
 }
 
-#GamesContentPane {
+#ProjectsContentPane {
 	margin: 0px;
 	padding: 0px;
 	font-size: 0px;
@@ -10,7 +10,7 @@
      overflow-y: hidden;
 }
 
-#GamesContentPane div {
+#ProjectsContentPane div {
 	font-size:20px;
 	display:inline-block;
 	background: #595959;
@@ -28,14 +28,14 @@
 	padding: 0;
 }
 
-#GamesContentPane div img {
+#ProjectsContentPane div img {
 	font-size:20px;
 	object-fit: contain;
 	width: 100%;
 	height: 100%;
 	padding: 0;
 }
-#GamesContentPane figcaption {
+#ProjectsContentPane figcaption {
   	background-color: black;
   	color: white;
   	font-style: italic;
@@ -47,13 +47,13 @@
   	transition: opacity .2s ease-in-out;
   	opacity: 0;
 }
-#GamesContentPane div:hover figcaption {
+#ProjectsContentPane div:hover figcaption {
   	opacity: 1;
 }
-#GamesContentPane div:hover {
+#ProjectsContentPane div:hover {
   	transform: scale(1.05);
 }
 
-#GamesContentPane a {
+#ProjectsContentPane a {
 	text-decoration: none;
 }

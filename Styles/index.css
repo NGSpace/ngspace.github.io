@@ -1,29 +1,15 @@
 #ContentPane {
 	width: 70%;
-  	background-color: #383838;
-     background-image: linear-gradient(180deg, #101010 30%, #383838);
-     color: lightgray;
+	color: lightgray;
 	font: bold 150px monospace, Fira Mono, serif;
 	transition: width 0.3s;
 }
+
 html {
-  scrollbar-transition: smooth;
-  scroll-behavior: smooth;
+	scrollbar-transition: smooth;
+	scroll-behavior: smooth;
 }
-#TitleNGS {color: red;
-	background: linear-gradient(to left, blue, red);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-stroke: 2px pink;
-	color: transparent;
-} #TitleS {color: gray;-webkit-text-stroke: 1px darkgray;}
-#TitleLAND {
-	font-size: 130px;
-	background: linear-gradient(to left, blue, red);
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: #ed0533;
-}
+
 #aboutmespan {
 	background: linear-gradient(180deg, #fFFFFF 55%, #ffed4b 10%);
 	color: transparent;
@@ -31,15 +17,17 @@ html {
 	-webkit-background-clip: text;
 }
 body {
-     background-color: #606060;
-     overflow: auto;
+	margin: 0px;
+	background-color: #606060;
+	background-color: #383838;
+	background-color: rgb(32, 32, 32);
+	background-size: 100% max(100%,2900px);
 }
 .tab {
 	font-size: 0px;
 	margin: 0;
 	padding: 0;
 	border: none;
-	//border-bottom: solid gray 5px;
 	border-width: 5px;
 	line-height:100%;
 }
@@ -56,6 +44,9 @@ body {
 	padding: 15px;
 	padding-left: 15px;
 	text-decoration:none;
+}
+#borderbottom a:hover {
+	text-decoration:underline;
 }
 .tab button {
 	font: 20px consolas, Fira Mono, serif;
@@ -78,8 +69,35 @@ body {
 	background-color: #929292;
 }
 .tabcontent {
-	font-size: 0;
 	display: none;
 	padding: 0px 0px;
 	border: none;
+	font-size: 0;
+}
+.ImageAndText {
+	width: fit-content;
+	text-wrap: nowrap;
+	vertical-align: 5px;
+}
+.ImageAndText span {
+	display: inline;
+	text-wrap: nowrap;
+	vertical-align: top;
+	font-size: 60px;
+}
+.Text p {
+	text-align: left;
+}
+#ContentPane .Text {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+#ContentPane .Text a:hover {
+	text-decoration-line: underline;
+}
+#ContentPane .Text a {
+	font-size: 55px;
+	color: pink;
+	text-decoration: none;
 }
