@@ -3,21 +3,24 @@
 <head>
 	<title>NGS's land</title>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0SCB1X0YP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M0SCB1X0YP');
-</script>
-
-     <link rel="stylesheet" href="Styles/index.css">
-     <link rel="stylesheet" href="Styles/projects.css">
-     <link rel="stylesheet" href="Styles/GamesList.css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M0SCB1X0YP"></script>
 	<script>
-		const Def = "Projects";
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'G-M0SCB1X0YP');
+	</script>
+	<link rel="icon" href="Images/ngs.png">
+	
+	<link rel="stylesheet" href="Styles/index.css">
+	<link rel="stylesheet" href="Styles/projects.css">
+	<link rel="stylesheet" href="Styles/GamesList.css">
+	<link rel="stylesheet" href="Styles/titlebar.css">
+	
+	<script>
+		const Def = "Highlight";
 		function openTab(evt, TabName) {
 			var i, tabcontent, tablinks;
 			tabcontent = document.getElementsByClassName("tabcontent");
@@ -31,126 +34,130 @@
 			document.getElementById(TabName).style.display = "block";
 			evt.className += " active";
 			if(history.pushState) {
-			    history.pushState(null, null, '?p=' + TabName);
+				history.pushState(null, null, '?p=' + TabName);
 			}
 		}
 	</script>
 </head>
 <body onload="load()">
-<center>
-	<div id="ContentPane">
-		<span>
+	<div id="topbar">
+		<a href="index.html"><img src="Images/ngs.png"></a>
 		<span id="TitleNGS">NGS</span><span id="TitleS">'s</span>
-		<span id="TitleLAND"></br>land</span></span>
-		
-		</br>
-		
-		<div class="tab">
-		
-		<button id="ProjectsButton" class="tablinks"onclick="openTab(this, 'Projects')">
-		Projects</button>
-		<button id="GamesButton" class="tablinks"onclick="openTab(this, 'Games')">Games</button>
-		<button id="AboutMeButton" class="tablinks"onclick="openTab(this, 'AboutMe')">
-		About me</button>
-		
-		<div id="borderbottom"></div>
-		
-		</div>
-		<div id="Projects" class="tabcontent">
-			<div id="NNUContentPane" height="fit-content">
-				<center>
-				<a id="NNUTitle" class="ImageAndText"
-				   href="https://github.com/ngspace/NNUEdit">
-					<image id="NNUEditLogo" style="width:42px" src="Images/NNUEdit.png">
-					<span id="NNUEditTitle">The NNUEdit code Editor</span>
-				</a>
-				</br>
-				<div style="text-align:left" class="Text">
-					<p>
-					NNUEdit is a code editor I made with the goal of one day reviving this
-					website/project and help me rebuild it from scratch as well as add
-					some games and any future games/projects to this list.
-					</p>
-				</div>
-				<image src="Images/ThisScreenShot.png">
-				<div style="text-align:left" class="Text">
-					<p>
-					It is completely open source and available and deeply tested in both
-					windows and linux. It should work on MacOS too but it was never
-					tested there.
-
-					
-					</br></br>It is very well optimized to minimize 
-					cpu, gpu and memory usage, even when working with (extremely)
-					large files (on my pc it was able to read files up to 2GB big without lagging a bit!)
-
-					
-					</br></br>It supports more than 40 programming langauges!
-
-					</br></br>It is very compact and easy to use!
-					
-					</br></br>Execute shell scripts and html files with F5!
-					</p>
-				</div>
-				<image src="Images/ThisSC.png">
-				<div style="text-align:left" class="Text">
-					<p>
-					<a href="https://github.com/NGSpace/NNUEdit/releases">Download!</a>
-					<a href="https://github.com/NGSpace/NNUEdit">Source Code!</a>
-					</p>
-				</div>
-				</center>
-			</div>
-		</div>
-		<div id="Games" class="tabcontent">
-			<div id="GamesContentPane">
-				</br>
-				<div><a href="HG.html">
-					<image src="Images/HG_Old_SS.png">
-						<figcaption>Unnamed Game (HTML)</figcaption>
-				</a></div>
-				
-				<div><a href="https://www.roblox.com/games/6939867224/The-Roads">
-					<image src="Images/The roads.png">
-					<figcaption>The Roads (Roblox)</figcaption>
-				</a></div>
-				<div><a href="Numbers.html">
-					<image src="Images/Numbers.png">
-					<figcaption>Numbers! (HTML)</figcaption>
-				</a></div>
-			</div>
-		</div>
-		<div id="AboutMe" class="tabcontent">
-			<a style="text-decoration:none;"
-				href="https://github.com/NGSpace">
-			<span id="aboutmespan"style="font-size:50px;">
-			I make software and games lol
-			</span>
-			</a>
-			<div style="font-size:20px;"></br></div>
-		</div>
-		<div id="borderbottom" style="font:initial;">
-			<a href="https://github.com/NGSpace">Github</a>
-			<a href="https://www.roblox.com/users/153081423/profile#!/creations">Roblox</a>
-			<a href="https://ngspace.itch.io/">Itch.io(nothing there yet)</a>
-		</div>
+		<span id="TitleLAND">land</span></span>
 	</div>
-</center>
-<script>
-function load() {
-	const Loc2 = window.location.search;
-	const urlParams = new URLSearchParams(Loc2);
-	if (urlParams.has('p')){
-		var Loc = urlParams.get('p');
-		console.log(Loc);
-		console.log(document.getElementById(Loc));
-		if (Loc!="") {
-			openTab(document.getElementById(Loc+"Button"), Loc);
+	<center>
+		<div id="ContentPane">
+			
+			<div class="tab">
+			
+				<button id="HighlightButton" class="tablinks"onclick="openTab(this, 'Highlight')">Highlight</button>
+				<button id="ProjectsButton" class="tablinks"onclick="openTab(this, 'Projects')">Projects</button>
+				<button id="AboutMeButton" class="tablinks"onclick="openTab(this, 'AboutMe')">About me</button>
+				
+				<div id="borderbottom"></div>
+			
+			</div>
+			<div id="Highlight" class="tabcontent">
+				<div id="HighlightContentPane" height="fit-content">
+					<a id="HudderTitle" class="ImageAndText" style="text-decoration: none;" href="https://github.com/ngspace/Hudder">
+						<image id="HudderLogo" style="width:80px" src="Images/Hudder.webp">
+						<span id="Hudder" style="color: #800080;">&nbsp;Hudder</span>
+					</a>
+					<div style="text-align:left;font-size: 30px;" class="Text">
+						<center>
+						<p>
+							<b>Want to do math to show icons on your screen? Want to use JavaScript and/or hudder's own custom language?! Well now you can! using this highly customizable hud creation mod you can create <i>ANY</i> HUD you want!!</b>
+						</p>
+						<p>
+							Hudder allows you to create a custom hud to appear on your screen in game using it's very simple language (Or JavaScript if you know how to use it)!
+						</p>
+						<p>
+							Draw the selected slot whereever you wish with the "hand" method!
+						</p>
+						<img src="Images/axe.png" style="width:66%;">
+						<p>
+							Flex that shiny new 4090 of yours with the "fps" variable!
+						</p>
+						<p>
+							Make all the kids in the elementary school playground jealous of your 128GB of RAM with the "maxram" variable!
+						</p>
+						<p>
+							Show all the other programmers how good you are by drawing a circle using vertices with the "colorvertices_con" method!
+						</p>
+						<img src="Images/circle.png" style="width:66%;">
+							
+						<div style="text-align:left" class="Text">
+							<p>
+							<a href="https://modrinth.com/mod/hudder">Modrinth</a>
+							&nbsp;<a href="hudder/">Wiki</a>&nbsp;
+							<a href="https://github.com/NGSpace/Hudder">Source Code</a>
+							</p>
+						</div>
+						</center>
+					</div>
+				</div>
+			</div>
+			<div id="Projects" class="tabcontent">
+				<div id="ProjectsContentPane">
+					</br>
+					<div><a href="HG.html">
+						<image src="Images/HG_Old_SS.png">
+							<figcaption>Unnamed Game (HTML)</figcaption>
+					</a></div>
+					
+					<div><a href="https://www.roblox.com/games/6939867224/The-Roads">
+						<image src="Images/The roads.png">
+						<figcaption>The Roads (Roblox)</figcaption>
+					</a></div>
+					<div><a href="Numbers.html">
+						<image src="Images/Numbers.png">
+						<figcaption>Numbers! (HTML)</figcaption>
+					</a></div>
+					
+					<div><a href="nnuedit.html">
+						<image src="Images/NNUEdit.png">
+						<figcaption>NNUEdit</figcaption>
+					</a></div>
+					
+					<div><a href="index.html">
+						<image src="Images/Hudder.webp">
+						<figcaption>Hudder</figcaption>
+					</a></div>
+				</div>
+			</div>
+			<div id="AboutMe" class="tabcontent" style="font-size: 0;">
+				<a style="text-decoration:none;"
+					href="https://github.com/NGSpace">
+				<span id="aboutmespan"style="font-size:50px;">
+				I make stuff
+				</span>
+				</a>
+				<br>
+				<span id="aboutmespan"style="font-size:10px;">
+				"ngspace" on discord
+				</span>
+				<div style="font-size:20px;"></br></div>
+			</div>
+			<div id="borderbottom" style="font:initial;">
+				<a href="https://github.com/NGSpace">Github</a>
+				<a href="https://www.roblox.com/users/153081423/profile">Roblox</a>
+				<a href="https://modrinth.com/user/ngspace">Modrinth</a>
+			</div>
+		</div>
+	</center>
+	<script>
+	function load() {
+		const Loc2 = window.location.search;
+		const urlParams = new URLSearchParams(Loc2);
+		if (urlParams.has('p')){
+			var Loc = urlParams.get('p');
+			if (Loc!="") {
+				openTab(document.getElementById(Loc+"Button"), Loc);
+			}
+		} else {
+			openTab(document.getElementById(Def+"Button"), Def);
 		}
-	} else {
-		openTab(document.getElementById(Def+"Button"), Def);
 	}
-}
-</script>
+	</script>
 </body>
 </html>
