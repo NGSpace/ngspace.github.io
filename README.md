@@ -7,7 +7,7 @@ A site to show off some of my projects as well as host the hudder wiki.
   * index.html
   * Numbers.html
   * HG.html
-  * wiki (hudder)
+  * hudder
     * index.html
     * howto.html
     * varlist.html
