@@ -1,9 +1,21 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	<script type="text/javascript">
-		window.location.href = "http://" + "ngspace.dev/" + window.location.pathname
-	</script>
+  <meta name="robots" content="noindex">
+  <script>
+    // Change this to your new origin (domain + optional port)
+    const NEW_ORIGIN = "https://ngspace.dev";
+    const target = NEW_ORIGIN + location.pathname + location.search + location.hash;
+    // replace() avoids polluting browser history
+    location.replace(target);
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://ngspace.dev">
+    <link rel="canonical" href="https://ngspace.dev">
+  </noscript>
 </head>
 <body>
-	Redirecting to https://ngspace.dev/, please wait.
+  If you are not redirected, <a id="link" href="#">click here</a>.
+  <script>document.getElementById('link').href = NEW_ORIGIN + location.pathname + location.search + location.hash;</script>
 </body>
+</html>
